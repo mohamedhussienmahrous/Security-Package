@@ -6,3 +6,6 @@ C:\Users\mohamed\Source\Repos\Neural-Network-Tasks-\Security Package App\Securit
 C:\Users\mohamed\Source\Repos\Neural-Network-Tasks-\Security Package App\Security Package App\obj\Debug\Security Package App.csproj.GenerateResource.Cache
 C:\Users\mohamed\Source\Repos\Neural-Network-Tasks-\Security Package App\Security Package App\obj\Debug\Security Package App.exe
 C:\Users\mohamed\Source\Repos\Neural-Network-Tasks-\Security Package App\Security Package App\obj\Debug\Security Package App.pdb
+C:\Users\mohamed\Source\Repos\Security\Security-Package\Security Package App\Security Package App\bin\Debug\Security Package App.exe.config
+C:\Users\mohamed\Source\Repos\Security\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.exe
+C:\Users\mohamed\Source\Repos\Security\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.pdb
