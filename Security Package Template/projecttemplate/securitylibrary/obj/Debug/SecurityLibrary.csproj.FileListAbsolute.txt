@@ -1,0 +1,5 @@
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package Template\projecttemplate\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package Template\projecttemplate\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package Template\projecttemplate\SecurityLibrary\obj\Debug\SecurityLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package Template\projecttemplate\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package Template\projecttemplate\SecurityLibrary\obj\Debug\SecurityLibrary.pdb

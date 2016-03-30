@@ -10,11 +10,13 @@ namespace SecurityLibrary
     {
         public string Encrypt(string plainText, int key)
         {
+            return General_Ceaser.encryption(plainText,key);
             throw new NotImplementedException();
         }
 
         public string Decrypt(string cipherText, int key)
         {
+            return General_Ceaser.decryption(cipherText, key);
             throw new NotImplementedException();
         }
 
