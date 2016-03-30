@@ -1,2 +1,4 @@
 online testing 
 http://www.xarg.org/tools/caesar-cipher/
+http://rumkin.com/tools/cipher/vigenere-autokey.php
+https://www.cs.uri.edu/cryptography/classicalvigenere.htm
