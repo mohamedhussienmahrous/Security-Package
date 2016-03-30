@@ -13,3 +13,10 @@ C:\Users\mohamed\Source\Repos\Security\Security-Package\Security Package App\Sec
 C:\Users\mohamed\Source\Repos\Security\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.exe
 C:\Users\mohamed\Source\Repos\Security\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.pdb
 >>>>>>> 617e7be3904bb089b2119982f888692a40180a33
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package App\Security Package App\bin\Debug\Security Package App.exe
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package App\Security Package App\bin\Debug\Security Package App.pdb
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.csprojResolveAssemblyReference.cache
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package App\Security Package App\obj\Debug\Security_Package_App.Properties.Resources.resources
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.csproj.GenerateResource.Cache
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.exe
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\Security Package App\Security Package App\obj\Debug\Security Package App.pdb
