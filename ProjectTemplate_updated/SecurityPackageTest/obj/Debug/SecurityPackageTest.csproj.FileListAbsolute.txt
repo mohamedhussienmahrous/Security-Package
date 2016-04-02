@@ -1,0 +1,7 @@
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityPackageTest\obj\Debug\SecurityPackageTest.csprojResolveAssemblyReference.cache
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
