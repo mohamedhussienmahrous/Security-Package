@@ -57,6 +57,14 @@ namespace SecurityLibrary
             }
             return decrypt;
         }
+        public static int Analysis(string Plain,string Cipher)
+        {
+            Plain = Plain.ToLower();
+            Cipher = Cipher.ToLower();
+            int D = Convert.ToInt32(Cipher[0]-Plain[0]);
+            if (D < 0) D += 25;
+            return D;
+        }
 
     }
 }

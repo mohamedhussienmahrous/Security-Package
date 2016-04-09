@@ -3,3 +3,8 @@ C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updat
 C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityLibrary\obj\Debug\SecurityLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\Micheal Youssef\Documents\GitHub\Security-Package\ProjectTemplate_updated\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+D:\ProjectTemplate_updated\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+D:\ProjectTemplate_updated\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+D:\ProjectTemplate_updated\SecurityLibrary\obj\Debug\SecurityLibrary.csprojResolveAssemblyReference.cache
+D:\ProjectTemplate_updated\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+D:\ProjectTemplate_updated\SecurityLibrary\obj\Debug\SecurityLibrary.pdb

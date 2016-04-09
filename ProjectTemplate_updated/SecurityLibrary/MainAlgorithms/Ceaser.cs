@@ -20,6 +20,7 @@ namespace SecurityLibrary
 
         public int Analyse(string plainText, string cipherText)
         {
+            return General_Ceaser.Analysis(plainText, cipherText);
             throw new NotImplementedException();
         }
     }

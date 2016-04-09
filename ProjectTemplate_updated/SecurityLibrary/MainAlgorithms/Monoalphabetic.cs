@@ -10,17 +10,20 @@ namespace SecurityLibrary
     {
         public string Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
+            return MonoalphabeticCipher.Analysis(plainText, cipherText);
+            //throw new NotImplementedException();
         }
 
         public string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return MonoalphabeticCipher.Decrypt(cipherText, key);
         }
 
         public string Encrypt(string plainText, string key)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return MonoalphabeticCipher.Encrypt(plainText, key).ToUpper();
         }
     }
 }

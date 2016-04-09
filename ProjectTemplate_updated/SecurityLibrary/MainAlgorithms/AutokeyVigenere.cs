@@ -10,7 +10,7 @@ namespace SecurityLibrary
     {
         public string Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
+            return auto_key_Vigenere.Analysis(plainText, cipherText);
         }
 
         public string Decrypt(string cipherText, string key)
