@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace SecurityLibrary
 {
     class auto_key_Vigenere
@@ -76,6 +75,7 @@ namespace SecurityLibrary
             }
             string Common = LCS(text, Key);
             Key= Key.Substring(0,(Key.Length-Common.Length));
+           // var Key2 = Key.Intersect(text);
             
             return Key;
         }

@@ -44,15 +44,29 @@ namespace SecurityLibrary
         }
         public static string Analysis(string Plain,string Cipher)
         {
+
             char[] Key = new char[26];
+
             Plain = Plain.ToLower();
             Cipher = Cipher.ToLower();
-            for (int i = 0; i < Plain.Length;++i )
+            for (int i = 0; i < Plain.Length; ++i)
             {
                 int index = Convert.ToInt32(Plain[i] - 'a');
                 Key[index] = Cipher[i];
             }
+            for (int w = 0; w < 26; w++)
+            {
+                int gX = Key.Distinct().Count();
+                if (Key[w] != '\0') continue;
+                for (int g = 0; g < 26; g++)
 
+                    if (gX < Key.Distinct().Count())
+                    {
+                       break; 
+
+                    }
+                    else Key[w] = Convert.ToChar(Convert.ToInt32('a') + g);
+            }
             return new string(Key);
         }
     }

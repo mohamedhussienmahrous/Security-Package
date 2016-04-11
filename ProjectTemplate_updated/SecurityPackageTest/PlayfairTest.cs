@@ -8,9 +8,9 @@ namespace SecurityPackageTest
     public class PlayfairTest
     {
         string mainPlain = "armuhsea";
-        string mainCipher = "monoarchy".ToUpper();
-        string mainKey = "rmcmbpim";
-
+        string mainKey = "monoarchy";
+        string mainCipher = "rmcmbpim".ToUpper();
+        
         [TestMethod]
         public void PlayfairTest1()
         {

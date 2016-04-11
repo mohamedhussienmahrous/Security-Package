@@ -8,14 +8,14 @@ namespace SecurityPackageTest
     [TestClass]
     public class ColumnarTest
     {
-        string mainPlain1 = "attachpostponeduntiltwoam";
-        string mainPlain2 = "attachpostponeduntiltwoamxxx";
+        string mainPlain1 = "attackpostponeduntiltwoam";
+        string mainPlain2 = "attackpostponeduntiltwoamxxx";
 
         List<int> key = new List<int>() { 4, 3, 1, 2, 5, 6, 7 };
 
         string mainCipher1 = "ttnaaptmtsuoaodwcoixknlxpetx".ToUpper();
-        string mainCipher2 = "ttnaaptmtsuoaodwcoiknlpet".ToUpper();
 
+        string mainCipher2 = "ttnaaptmtsuoaodwcoiknlpet".ToUpper();
 
         [TestMethod]
         public void ColumnarTest1()

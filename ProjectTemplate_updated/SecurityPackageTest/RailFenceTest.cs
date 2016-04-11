@@ -58,7 +58,7 @@ namespace SecurityPackageTest
             string plain2 = algorithm.Decrypt(mainCipher3, mainKey2);
 
             Assert.IsTrue(plain1.Equals(mainPlain, StringComparison.InvariantCultureIgnoreCase)
-             || plain1.Equals(mainPlain, StringComparison.InvariantCultureIgnoreCase));
+             || plain2.Equals(mainPlain, StringComparison.InvariantCultureIgnoreCase));
 
         }
 
