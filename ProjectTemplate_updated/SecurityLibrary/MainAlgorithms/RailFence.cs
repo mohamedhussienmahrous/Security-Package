@@ -15,12 +15,13 @@ namespace SecurityLibrary
 
         public string Decrypt(string cipherText, int key)
         {
-            throw new NotImplementedException();
+            return Rail_Fence.Decryption(cipherText, key); 
         }
 
         public string Encrypt(string plainText, int key)
         {
-            throw new NotImplementedException();
+            return Rail_Fence.encryption(plainText, key);
+            
         }
     }
 }

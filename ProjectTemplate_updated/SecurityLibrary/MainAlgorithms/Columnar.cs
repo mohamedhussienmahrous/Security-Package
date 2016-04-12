@@ -15,12 +15,12 @@ namespace SecurityLibrary
 
         public string Decrypt(string cipherText, List<int> key)
         {
-            throw new NotImplementedException();
+            return Columnarcipher.Decryption(cipherText, key);
         }
 
         public string Encrypt(string plainText, List<int> key)
         {
-            throw new NotImplementedException();
+           return Columnarcipher.encryption(plainText, key);
         }
     }
 }

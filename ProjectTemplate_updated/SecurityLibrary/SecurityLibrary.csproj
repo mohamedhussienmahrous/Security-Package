@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AES\AES.cs" />
     <Compile Include="AES\ExtendedEuclid.cs" />
+    <Compile Include="Columnarcipher.cs" />
     <Compile Include="General_Ceaser.cs" />
     <Compile Include="MainAlgorithms\Columnar.cs" />
     <Compile Include="DES\DES.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="MainAlgorithms\PlayFair.cs" />
     <Compile Include="MainAlgorithms\RailFence.cs" />
     <Compile Include="MonoalphabeticCipher.cs" />
+    <Compile Include="Rail_Fence.cs" />
     <Compile Include="RC4\RC4.cs" />
     <Compile Include="MainAlgorithms\RepeatingKeyVigenere.cs" />
     <Compile Include="MainAlgorithms\AutokeyVigenere.cs" />
