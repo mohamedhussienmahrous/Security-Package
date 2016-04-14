@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SecurityLibrary;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace SecurityPackageTest
 {
@@ -12,6 +13,14 @@ namespace SecurityPackageTest
         string mainPlain = "meetmeafterthetogaparty";
         string mainCipher = "phhwphdiwhuwkhwrjdsduwb".ToUpper();
         string mainKey = "defghijklmnopqrstuvwxyzabc";
+
+
+        string mainPlain1 = "abcdefghijklmnopqrstuvwxyz";
+        string mainCipher1 = "isyvkjruxedzqmctplofnbwgah".ToUpper();
+        string mainKey1 = "isyvkjruxedzqmctplofnbwgah";
+
+        string mainPlain2 = "hellosecuritymonoalphabetic";
+        string mainCipher2 = "ukzzcokynlxfaqcmciztuiskfxy".ToUpper();
 
         [TestMethod]
         public void MonoTest1()
@@ -32,38 +41,71 @@ namespace SecurityPackageTest
         [TestMethod]
         public void MonoTest3()
         {
+            Regex regex = new Regex("d.{3}hijk.{4}p.rs.u.w.{4}b.");
+
             Monoalphabetic algorithm = new Monoalphabetic();
             string key = algorithm.Analyse(mainPlain, mainCipher);
             List<char> keyChar = new List<char>(key);
             Assert.AreEqual(key.Length, 26);
             Assert.AreEqual(keyChar.Distinct().Count(), 26);
 
-            Assert.AreEqual(key[0], 'd'); 
-            //Assert.AreEqual(key[1], 'e');
-            //Assert.AreEqual(key[2], 'f');
-            //Assert.AreEqual(key[3], 'g');
-            Assert.AreEqual(key[4], 'h');
-            Assert.AreEqual(key[5], 'i');
-            Assert.AreEqual(key[6], 'j');
-            Assert.AreEqual(key[7], 'k');
-            //Assert.AreEqual(key[8], 'l');
-            //Assert.AreEqual(key[9], 'm');
-            //Assert.AreEqual(key[10], 'n');
-            //Assert.AreEqual(key[11], 'o');
-            Assert.AreEqual(key[12], 'p');
-            //Assert.AreEqual(key[13], 'q');
-            Assert.AreEqual(key[14], 'r');
-            Assert.AreEqual(key[15], 's');
-            //Assert.AreEqual(key[16], 't');
-            Assert.AreEqual(key[17], 'u');
-            //Assert.AreEqual(key[18], 'v');
-            Assert.AreEqual(key[19], 'w');
-            //Assert.AreEqual(key[20], 'x');
-            //Assert.AreEqual(key[21], 'y');
-            //Assert.AreEqual(key[22], 'z');
-            //Assert.AreEqual(key[23], 'a');
-            Assert.AreEqual(key[24], 'b');
-            //Assert.AreEqual(key[25], 'c');
+            Assert.IsTrue(regex.Match(key).Success);
+        }
+
+        [TestMethod]
+        public void MonoTest4()
+        {
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string cipher = algorithm.Encrypt(mainPlain1, mainKey1);
+            Assert.IsTrue(cipher.Equals(mainCipher1, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MonoTest5()
+        {
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string plain = algorithm.Decrypt(mainCipher1, mainKey1);
+            Assert.IsTrue(plain.Equals(mainPlain1, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MonoTest6()
+        {
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string key = algorithm.Analyse(mainPlain1, mainCipher1);
+            List<char> keyChar = new List<char>(key);
+            Assert.AreEqual(key.Length, 26);
+            Assert.AreEqual(keyChar.Distinct().Count(), 26);
+            Assert.IsTrue(key.Equals(mainKey1, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MonoTest7()
+        {
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string cipher = algorithm.Encrypt(mainPlain2, mainKey1);
+            Assert.IsTrue(cipher.Equals(mainCipher2, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MonoTest8()
+        {
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string plain = algorithm.Decrypt(mainCipher2, mainKey1);
+            Assert.IsTrue(plain.Equals(mainPlain2, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MonoTest9()
+        {
+            Regex regex = new Regex("isy.k.{2}ux.{2}zqmct.lofn.{3}a.");
+
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string key = algorithm.Analyse(mainPlain2, mainCipher2);
+            List<char> keyChar = new List<char>(key);
+            Assert.AreEqual(key.Length, 26);
+            Assert.AreEqual(keyChar.Distinct().Count(), 26);
+            Assert.IsTrue(regex.Match(key).Success);
         }
     }
 }

@@ -73,18 +73,28 @@ namespace SecurityLibrary
                 Key += ch;
                
             }
-            string Common = LCS(text, Key);
-            Key= Key.Substring(0,(Key.Length-Common.Length));
-           // var Key2 = Key.Intersect(text);
+            x = LCS(text, Key);
             
-            return Key;
+            
+            return Key.Substring(0,x);
         }
-        private static string LCS(string str1,string str2)
+        private static int LCS(string str1, string str2)
         {
-            string common="";
-            ////LCS dynamic programing
-
-            return common;
+            int index1 = str1.Length-1, index2 = str2.Length-1;
+            while (index1 != -1)
+            {
+                if (str1[index1] != str2[index2])
+                {
+                    --index1;
+                    index2 = str2.Length-1;
+                }
+                else
+                {
+                    --index1;
+                    --index2;
+                }
+            }
+            return index2 + 1;
         }
     }
 }

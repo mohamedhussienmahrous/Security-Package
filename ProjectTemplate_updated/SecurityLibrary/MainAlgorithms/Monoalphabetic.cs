@@ -11,12 +11,10 @@ namespace SecurityLibrary
         public string Analyse(string plainText, string cipherText)
         {
             return MonoalphabeticCipher.Analysis(plainText, cipherText);
-            //throw new NotImplementedException();
         }
 
         public string Decrypt(string cipherText, string key)
         {
-            //throw new NotImplementedException();
             return MonoalphabeticCipher.Decrypt(cipherText, key);
         }
 

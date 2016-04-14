@@ -14,7 +14,7 @@ namespace SecurityPackageTest
         string mainKey = "0x133457799BBCDFF1";
 
         string mainPlain2 = "0x596F7572206C6970";
-        string mainCipher2 = "C0999FDDE378D7ED";
+        string mainCipher2 = "0xC0999FDDE378D7ED";
         string mainKey2 = "0x0E329232EA6D0D73";
 
         string mainPlainTriple = "0x0123456789ABCDEF";

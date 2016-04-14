@@ -8,10 +8,11 @@ namespace SecurityPackageTest
     public class RailFenceTest
     {
         string mainPlain = "meetmeaftertheparty";
+        string mainPlain2 = "meetmeafterthepartyxx";
         string mainCipher = "mematrhpryetefeteat".ToUpper();
 
-        string mainCipher2 = "mtaehayemfrerxeettptx".ToUpper();
-        string mainCipher3 = "mtaehayemfrereettpt".ToUpper();
+        string mainCipher3 = "mtaehayemfrerxeettptx".ToUpper();
+        string mainCipher2 = "mtaehayemfrereettpt".ToUpper();
 
         int mainKey = 2;
         int mainKey2 = 3;
@@ -58,7 +59,7 @@ namespace SecurityPackageTest
             string plain2 = algorithm.Decrypt(mainCipher3, mainKey2);
 
             Assert.IsTrue(plain1.Equals(mainPlain, StringComparison.InvariantCultureIgnoreCase)
-             || plain2.Equals(mainPlain, StringComparison.InvariantCultureIgnoreCase));
+             || plain2.Equals(mainPlain2, StringComparison.InvariantCultureIgnoreCase));
 
         }
 

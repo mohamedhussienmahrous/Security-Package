@@ -13,11 +13,9 @@ namespace SecurityLibrary
             int vb = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(plaintext.Length) / Convert.ToDouble(key)));
             string cipher = "";
             for (int w = 0; w < key; w++)
-                for (int g = w; g <= (vb*key)-key; g+=key)
+                for (int g = w; g <= (vb * key) - key; g += key)
                 {
-                    //if (g >= plaintext.Length)
-                    //    cipher += 'x';
-                    //else
+                  
                     cipher += plaintext[g];                   
                 }
             return (cipher).ToUpper();
@@ -25,13 +23,17 @@ namespace SecurityLibrary
         public static string Decryption(string cipher, int key)
         {
             int vb = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(cipher.Length) / Convert.ToDouble(key)));
+
             string plaintext = "";
             for (int w = 0; w < vb; w++)
-                for (int g = w; g <= (vb * key) - key; g += vb)
+                for (int g = w; g < (key * vb); g += vb)
                 {
+                    if (g >= cipher.Length)
+                        continue;
+  
                     plaintext += cipher[g];
                 }
-            return (plaintext);
+            return (plaintext).ToLower();
         }
         static public List<int> analysis(string PlainText, string cipher)
         {

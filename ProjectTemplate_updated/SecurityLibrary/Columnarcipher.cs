@@ -10,8 +10,6 @@ namespace SecurityLibrary
     {
         public static string encryption(string plaintext, List<int> key)
         {
-           
-
             int vb = Convert.ToInt32( Math.Ceiling(Convert.ToDouble(plaintext.Length) / Convert.ToDouble(key.Count)));
             char[] cipher = new char[vb*key.Count];
             for (int w = 0; w < key.Count; w++)

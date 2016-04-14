@@ -21,6 +21,8 @@ namespace SecurityPackageTest
         List<int> mainPlainError2 = new List<int>() { 11, 10, 3, 8 };
         List<int> mainCipherError2 = new List<int>() { 18, 3, 4, 10 };
 
+        List<int> keyError = new List<int>() { 11, 10, 3, 8 };
+
         string mainKey = "dcif";
 
         [TestMethod]
@@ -99,6 +101,16 @@ namespace SecurityPackageTest
             HillCipher algorithm = new HillCipher();
 
             List<int> key2 = algorithm.Analyse(mainPlainError2, mainCipherError2);
+        }
+
+        // Decrypt with invalid key
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void HillCipherError3()
+        {
+            HillCipher algorithm = new HillCipher();
+
+            List<int> key2 = algorithm.Decrypt(plain, keyError);
         }
     }
 }

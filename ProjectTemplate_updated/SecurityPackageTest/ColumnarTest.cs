@@ -13,9 +13,8 @@ namespace SecurityPackageTest
 
         List<int> key = new List<int>() { 4, 3, 1, 2, 5, 6, 7 };
 
-        string mainCipher1 = "ttnaaptmtsuoaodwcoixknlxpetx".ToUpper();
-
-        string mainCipher2 = "ttnaaptmtsuoaodwcoiknlpet".ToUpper();
+        string mainCipher1 = "ttnaaptmtsuoaodwcoiknlpet".ToUpper();
+        string mainCipher2 = "ttnaaptmtsuoaodwcoixknlxpetx".ToUpper();
 
         [TestMethod]
         public void ColumnarTest1()
