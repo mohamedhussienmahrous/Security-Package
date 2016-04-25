@@ -105,6 +105,7 @@ namespace SecurityPackageTest
             List<char> keyChar = new List<char>(key);
             Assert.AreEqual(key.Length, 26);
             Assert.AreEqual(keyChar.Distinct().Count(), 26);
+
             Assert.IsTrue(regex.Match(key).Success);
         }
     }

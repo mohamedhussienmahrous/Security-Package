@@ -61,6 +61,7 @@
     <Compile Include="ColumnarTest.cs" />
     <Compile Include="AESTest.cs" />
     <Compile Include="ExtendedEuclidTest.cs" />
+    <Compile Include="RC4Test.cs" />
     <Compile Include="RSATest.cs" />
     <Compile Include="DeffieHelmanTest.cs" />
     <Compile Include="MD5Test.cs" />

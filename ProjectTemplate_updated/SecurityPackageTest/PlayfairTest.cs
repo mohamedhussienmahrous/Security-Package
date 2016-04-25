@@ -13,7 +13,7 @@ namespace SecurityPackageTest
 
         string mainPlain1 = "hidethegold";
         string mainKey1 = "helloworld";
-        string mainCipher1 = "lfgdmwdnwoav".ToUpper();
+        string mainCipher1 = "lfgdnwdpwoav".ToUpper();
 
         string mainPlain2 = "comsecmeanscommunicationssecurity";
         string mainPlain22 = "comsecmeanscommunjcatjonssecurjty";

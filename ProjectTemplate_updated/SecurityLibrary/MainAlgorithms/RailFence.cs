@@ -10,7 +10,7 @@ namespace SecurityLibrary
     {
         public int Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
+            return Rail_Fence.analysis(plainText, cipherText);
         }
 
         public string Decrypt(string cipherText, int key)

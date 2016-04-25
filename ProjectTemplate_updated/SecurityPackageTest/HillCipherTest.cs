@@ -105,7 +105,7 @@ namespace SecurityPackageTest
 
         // Decrypt with invalid key
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(System.Exception), AllowDerivedTypes=true)]
         public void HillCipherError3()
         {
             HillCipher algorithm = new HillCipher();

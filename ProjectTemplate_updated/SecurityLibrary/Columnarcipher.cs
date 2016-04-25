@@ -47,22 +47,30 @@ namespace SecurityLibrary
 
             return new string(PlainText);
         }
-        static public List<int> analysis(string PlainText, string cipher)
+        static public List<int> analysis(string PlainText, string cipherText)
         {
-            cipher = cipher.ToLower();
+
+            PlainText = PlainText.ToLower();
+            cipherText = cipherText.ToLower();
+            int assumekeylen = 0;
             List<int> key = new List<int>();
-            //int vb = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(PlainText.Length) / Convert.ToDouble(key.Count)));
-            //char[] cipher = new char[vb * key.Count];
-            //for (int w = 0; w < key.Count; w++)
-            //    for (int g = 0; g < vb; g++)
-            //    {
-            //        if ((key[w] - 1) * (vb) + (g) >= cipher.Length)
-            //            continue;
-            //        else if (w + (g) * (key.Count) >= plaintext.Length)
-            //            cipher[(key[w] - 1) * (vb) + (g)] = 'x';
-            //        else
-            //            cipher[(key[w] - 1) * (vb) + (g)] = plaintext[w + (g) * (key.Count)];
-            //    }
+
+            //while (true)
+            //{
+            //    key.Add(assumekeylen);
+
+            //    for (int w = 0; w < key.Count; w++)
+            //        for (int g = 0; g < vb; g++)
+            //        {
+            //            if ((key[w] - 1) * (vb) + (g) >= cipher.Length)
+            //                continue;
+            //            else if (w + (g) * (key.Count) >= plaintext.Length)
+            //                cipher[(key[w] - 1) * (vb) + (g)] = 'x';
+            //            else
+            //                cipher[(key[w] - 1) * (vb) + (g)] = plaintext[w + (g) * (key.Count)];
+            //        }
+            //}
+
             return key;
         }
 

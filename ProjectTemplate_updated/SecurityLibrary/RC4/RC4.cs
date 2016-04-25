@@ -13,12 +13,12 @@ namespace SecurityLibrary.RC4
     {
         public override string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
+            return RC4Cipher.dcryption(cipherText, key);
         }
 
         public override  string Encrypt(string plainText, string key)
         {
-            throw new NotImplementedException();
+            return RC4Cipher.encryption(plainText, key);
         }
     }
 }

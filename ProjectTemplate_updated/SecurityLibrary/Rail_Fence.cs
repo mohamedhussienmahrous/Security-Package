@@ -35,22 +35,32 @@ namespace SecurityLibrary
                 }
             return (plaintext).ToLower();
         }
-        static public List<int> analysis(string PlainText, string cipher)
+        static public int analysis(string PlainText, string cipherText)
         {
-            cipher = cipher.ToLower();
-            List<int> key = new List<int>();
-            //int vb = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(PlainText.Length) / Convert.ToDouble(key.Count)));
-            //char[] cipher = new char[vb * key.Count];
-            //for (int w = 0; w < key.Count; w++)
-            //    for (int g = 0; g < vb; g++)
-            //    {
-            //        if ((key[w] - 1) * (vb) + (g) >= cipher.Length)
-            //            continue;
-            //        else if (w + (g) * (key.Count) >= plaintext.Length)
-            //            cipher[(key[w] - 1) * (vb) + (g)] = 'x';
-            //        else
-            //            cipher[(key[w] - 1) * (vb) + (g)] = plaintext[w + (g) * (key.Count)];
-            //    }
+            PlainText = PlainText.ToLower();
+            cipherText = cipherText.ToLower();
+            int key = 1;
+            int vb = 0, w = 0;
+            bool kaml = true;
+            while (kaml)
+            {
+                if (key > PlainText.Length) break;
+                vb = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(PlainText.Length) / Convert.ToDouble(key)));
+                w = 0;
+                for (int g = 0; g <= (vb * key) - key; g += key)
+                {
+
+                    if (PlainText[g] != cipherText[w])
+                    {
+                        ++key;
+                        kaml = true;
+                        break;
+
+                    }
+                    else kaml = false;
+                    ++w;
+                }
+            }
             return key;
         }
 
