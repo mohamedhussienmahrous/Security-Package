@@ -8,16 +8,53 @@ namespace SecurityLibrary
 {
     static class RC4Cipher
     {
+        static string cipherText;
+        static int[] S;
         public static string encryption(string plainText, string key)
         {
-            int[] S = Initial_Permutation_of_S(key.Length, key);
-            string cipherText = Stream_Generation_for_ecryption(S, plainText);
+
+            if (plainText[0] == '0' && plainText[1] == 'x')
+            {
+                plainText = plainText.Substring(2, plainText.Length - 2);
+                key = key.Substring(2, key.Length - 2);
+                key = ConvertHexToString(key);
+                plainText = ConvertHexToString(plainText);
+
+                S = Initial_Permutation_of_S(key.Length, key);
+                cipherText = Stream_Generation_for_ecryption(S, plainText);
+
+                cipherText = "0x" + ConvertStringToHex(cipherText);
+
+            }
+            else
+            {
+                S = Initial_Permutation_of_S(key.Length, key);
+                cipherText = Stream_Generation_for_ecryption(S, plainText);
+            }
             return cipherText;
         }
         public static string dcryption(string cipherText, string key)
         {
-            int[] S = Initial_Permutation_of_S(key.Length, key);
-            string decryption = Stream_Generation_for_decryption(S, cipherText);
+            string decryption = "";
+            if (cipherText[0] == '0' && cipherText[1] == 'x')
+            {
+                cipherText = cipherText.Substring(2, cipherText.Length - 2);
+                key = key.Substring(2, key.Length - 2);
+                key = ConvertHexToString(key);
+                cipherText = ConvertHexToString(cipherText);
+
+               int [] S = Initial_Permutation_of_S(key.Length, key);
+                cipherText = Stream_Generation_for_decryption(S, cipherText);
+
+                cipherText = "0x" + ConvertStringToHex(cipherText);
+
+            }
+            else
+            {
+               int [] S = Initial_Permutation_of_S(key.Length, key);
+               decryption = Stream_Generation_for_ecryption(S, cipherText);
+            }         
+
             return decryption;
         }
         static int[] Initial_Permutation_of_S(int Klength, string Key)
@@ -67,7 +104,7 @@ namespace SecurityLibrary
             {
                 i = (i + 1) % 256;
                 j = (j + S[i]) % 256;
-                 x1 = S[i];
+                x1 = S[i];
                 S[i] = S[j];
                 S[j] = x1;
                 int t = Convert.ToInt32(S[i] + S[j]) % 256;
@@ -75,6 +112,29 @@ namespace SecurityLibrary
                 plain_text += Convert.ToChar((ecryption[g]) ^ K);
             }
             return plain_text;
+        }
+
+
+
+        public static string ConvertStringToHex(string asciiString)
+        {
+            string hex = "";
+            foreach (char c in asciiString)
+            {
+                int tmp = c;
+                hex += String.Format("{0:x2}", (uint)System.Convert.ToUInt32(tmp.ToString()));
+            }
+            return hex;
+        }
+        public static string ConvertHexToString(string HexValue)
+        {
+            string StrValue = "";
+            while (HexValue.Length > 0)
+            {
+                StrValue += System.Convert.ToChar(System.Convert.ToUInt32(HexValue.Substring(0, 2), 16)).ToString();
+                HexValue = HexValue.Substring(2, HexValue.Length - 2);
+            }
+            return StrValue;
         }
     }
 }
