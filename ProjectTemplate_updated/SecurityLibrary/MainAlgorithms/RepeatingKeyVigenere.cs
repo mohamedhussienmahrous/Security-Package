@@ -10,17 +10,17 @@ namespace SecurityLibrary
     {
         public string Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
+            return Vigenere_with_Repeating_key.Analyse(plainText,cipherText);
         }
 
         public string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
+            return Vigenere_with_Repeating_key.decrypt(cipherText, key);
         }
 
         public string Encrypt(string plainText, string key)
         {
-            throw new NotImplementedException();
+            return Vigenere_with_Repeating_key.encrypt(plainText, key);
         }
     }
 }

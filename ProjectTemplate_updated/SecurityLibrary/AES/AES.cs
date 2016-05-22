@@ -13,12 +13,14 @@ namespace SecurityLibrary.AES
     {
         public override string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
+            AESAlgorithm AES = new AESAlgorithm();
+            return AES.Decrypt(cipherText, key);
         }
 
         public override string Encrypt(string plainText, string key)
         {
-            throw new NotImplementedException();
+            AESAlgorithm AES = new AESAlgorithm();
+            return AES.Encrypt(plainText, key);
         }
     }
 }

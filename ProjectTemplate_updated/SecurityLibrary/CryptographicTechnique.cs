@@ -12,7 +12,6 @@ namespace SecurityLibrary
         {
             throw new NotSupportedException();
         }
-
         public abstract string Decrypt(string cipherText, string key);
 
         public abstract string Encrypt(string plainText, string key);

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace SecurityPackageTest
 {
-    [Ignore]
+    //[Ignore]
     [TestClass]
     public class DeffieHelmanTest
     {
@@ -34,6 +34,15 @@ namespace SecurityPackageTest
             List<int> key = algorithm.GetKeys(353, 3, 97, 233);
             Assert.AreEqual(key[0], 160);
             Assert.AreEqual(key[1], 160);
+        }
+
+        [TestMethod]
+        public void DeffieHelmanNewTest()
+        {
+            DiffieHellman algorithm = new DiffieHellman();
+            List<int> key = algorithm.GetKeys(541, 10, 50, 100);
+            Assert.AreEqual(key[0], 449);
+            Assert.AreEqual(key[1], 449);
         }
     }
 }

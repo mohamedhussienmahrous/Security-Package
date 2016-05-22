@@ -12,9 +12,10 @@ namespace SecurityLibrary
             string Cipher = "";
             Plain = Plain.ToLower();
             Key = Key.ToLower();
+            int index;
             for (int i = 0; i < Plain.Length; ++i)
             {
-                int index = Plain[i] - 'a';
+                index = Plain[i] - 'a';
                 Cipher += Key[index];
             }
             return Cipher;
@@ -81,6 +82,12 @@ namespace SecurityLibrary
             }
 
             return new string(Key);
+        }
+
+        public static string analysis_per_frequency()
+        {
+
+            return null;
         }
     }
 }

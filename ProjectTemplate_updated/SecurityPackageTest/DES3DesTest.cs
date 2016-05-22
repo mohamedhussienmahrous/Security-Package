@@ -21,8 +21,13 @@ namespace SecurityPackageTest
         string mainCipherTriple = "0x85E813540F0AB405";
         List<string> mainKeyTriple =  new List<string>() {"0x133457799BBCDFF1", "0x133457799BBCDFF1" };
 
+
+        string newPlain = "0x6D6573736167652E";
+        string newCipher = "0x7CF45E129445D451";
+        string newKey = "0x38627974656B6579";
+
         [TestMethod]
-        public void DESTest1()
+        public void DESTestEnc1()
         {
             DES algorithm = new DES();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
@@ -30,7 +35,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void DESTest2()
+        public void DESTestDec1()
         {
             DES algorithm = new DES();
             string plain = algorithm.Decrypt(mainCipher, mainKey);
@@ -38,7 +43,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void DESTest3()
+        public void DESTestEnc2()
         {
             DES algorithm = new DES();
             string cipher = algorithm.Encrypt(mainPlain2, mainKey2);
@@ -46,7 +51,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void DESTest4()
+        public void DESTestDec2()
         {
             DES algorithm = new DES();
             string plain = algorithm.Decrypt(mainCipher2, mainKey2);
@@ -54,7 +59,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void TripleDESTest1()
+        public void TripleDESTestEnc1()
         {
             TripleDES algorithm = new TripleDES();
             string cipher = algorithm.Encrypt(mainPlainTriple, mainKeyTriple);
@@ -62,12 +67,28 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void TripleDESTest2()
+        public void TripleDESTestDec1()
         {
             TripleDES algorithm = new TripleDES();
             string plain = algorithm.Decrypt(mainCipherTriple, mainKeyTriple);
             Assert.IsTrue(plain.Equals(mainPlainTriple, StringComparison.InvariantCultureIgnoreCase));
         }
 
+
+        [TestMethod]
+        public void DESTestNewEnc()
+        {
+            DES algorithm = new DES();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void DESTestNewDec()
+        {
+            DES algorithm = new DES();
+            string plain = algorithm.Decrypt(newCipher, newKey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
+        }
     }
 }

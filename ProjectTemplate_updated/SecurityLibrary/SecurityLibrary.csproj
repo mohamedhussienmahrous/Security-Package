@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\AESAlgorithm.cs">
+      <Link>AESAlgorithm.cs</Link>
+    </Compile>
     <Compile Include="AES\AES.cs" />
     <Compile Include="AES\ExtendedEuclid.cs" />
     <Compile Include="Columnarcipher.cs" />
     <Compile Include="General_Ceaser.cs" />
+    <Compile Include="HillcipherClass.cs" />
+    <Compile Include="ListOP.cs" />
     <Compile Include="MainAlgorithms\Columnar.cs" />
     <Compile Include="DES\DES.cs" />
     <Compile Include="DES\TripleDES.cs" />
@@ -55,6 +60,8 @@
     <Compile Include="MainAlgorithms\PlayFair.cs" />
     <Compile Include="MainAlgorithms\RailFence.cs" />
     <Compile Include="MonoalphabeticCipher.cs" />
+    <Compile Include="Multiplicative_inverse.cs" />
+    <Compile Include="Play_Fair.cs" />
     <Compile Include="Rail_Fence.cs" />
     <Compile Include="RC4Cipher.cs" />
     <Compile Include="RC4\RC4.cs" />
@@ -62,11 +69,12 @@
     <Compile Include="MainAlgorithms\AutokeyVigenere.cs" />
     <Compile Include="MainAlgorithms\Ceaser.cs" />
     <Compile Include="Exceptions\InvalidAnlysisException.cs" />
-    <Compile Include="MainAlgorithms\Monoalphabetic.cs" />
+    <Compile Include="MD5\Monoalphabetic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICryptographicTechnique.cs" />
     <Compile Include="auto_key_Vigenere.cs" />
     <Compile Include="RSA\RSA.cs" />
+    <Compile Include="Vigenere_with_Repeating_key.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

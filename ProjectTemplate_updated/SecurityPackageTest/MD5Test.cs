@@ -55,5 +55,21 @@ namespace SecurityPackageTest
             string hash = algorithm.GetHash("qwertyuiopasdfghjklzxcvbnm");
             Assert.IsTrue(hash.Equals("E5DAAA90C369ADFD156862D6DF632DED", StringComparison.InvariantCultureIgnoreCase));
         }
+
+        [TestMethod]
+        public void MD5Test7()
+        {
+            MD5 algorithm = new MD5();
+            string hash = algorithm.GetHash("kndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbffbekjfbwekjbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfebfkjebgkjwebgkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbfkndflkandfanqflqnwfaaknsdfjsbdfhs jasdb dasjkfbajk9u4238hrfkjdbffbweufbweugbu");
+            Assert.IsTrue(hash.Equals("91516cddeec3d6b4672ece1ab19f450a", StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MD5NewTest()
+        {
+            MD5 algorithm = new MD5();
+            string hash = algorithm.GetHash("This is a security test");
+            Assert.IsTrue(hash.Equals("ca84feb859d390498ab49b2aad8e4fb4", StringComparison.InvariantCultureIgnoreCase));
+        }
     }
 }

@@ -4,7 +4,7 @@ using SecurityLibrary.AES;
 
 namespace SecurityPackageTest
 {
-    [Ignore]
+   // [Ignore]
     [TestClass]
     public class AESTest
     {
@@ -20,9 +20,12 @@ namespace SecurityPackageTest
         string mainCipher3 = "0x69c4e0d86a7b0430d8cdb78070b4c55a";
         string mainKey3 = "0x000102030405060708090a0b0c0d0e0f";
 
+        string newPlain = "0x54776F204F6E65204E696E652054776F";
+        string newCipher = "0x29C3505F571420F6402299B31A02D73A";
+        string newKey = "0x5468617473206D79204B756E67204675";
 
         [TestMethod]
-        public void AESTest1()
+        public void AESTestEnc1()
         {
             AES algorithm = new AES();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
@@ -30,7 +33,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest2()
+        public void AESTestDec1()
         {
             AES algorithm = new AES();
             string plain = algorithm.Decrypt(mainCipher, mainKey);
@@ -38,7 +41,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest3()
+        public void AESTestEnc2()
         {
             AES algorithm = new AES();
             string cipher = algorithm.Encrypt(mainPlain2, mainKey2);
@@ -46,7 +49,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest4()
+        public void AESTestDec2()
         {
             AES algorithm = new AES();
             string plain = algorithm.Decrypt(mainCipher2, mainKey2);
@@ -54,7 +57,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest5()
+        public void AESTestEnc3()
         {
             AES algorithm = new AES();
             string cipher = algorithm.Encrypt(mainPlain3, mainKey3);
@@ -62,11 +65,27 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest6()
+        public void AESTestDec3()
         {
             AES algorithm = new AES();
             string plain = algorithm.Decrypt(mainCipher3, mainKey3);
             Assert.IsTrue(plain.Equals(mainPlain3, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void AESTestNewEnc()
+        {
+            AES algorithm = new AES();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void AESTestNewDec()
+        {
+            AES algorithm = new AES();
+            string plain = algorithm.Decrypt(newCipher, newKey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }

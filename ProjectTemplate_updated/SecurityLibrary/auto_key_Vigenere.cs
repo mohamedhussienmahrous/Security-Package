@@ -18,7 +18,6 @@ namespace SecurityLibrary
             key.ToUpper();
             text.ToUpper();
 
-
             while (text.Length != key.Length)
             {
                 key += text[i++];

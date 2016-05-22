@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SecurityLibrary.AES
 {
-    public class ExtendedEuclid 
+    public class ExtendedEuclid
     {
         /// <summary>
         /// 
@@ -16,7 +16,7 @@ namespace SecurityLibrary.AES
         /// <returns>Mul inverse, -1 if no inv</returns>
         public int GetMultiplicativeInverse(int number, int baseN)
         {
-            throw new NotImplementedException();
+            return Mulc_inverse.calculate_multiplicated_inverse(number, baseN);
         }
     }
 }

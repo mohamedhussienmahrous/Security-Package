@@ -27,10 +27,9 @@ namespace SecurityLibrary
             encrypt = "";
             for (int index = 0; index < text.Length; index++)
             {
-                if ('a' <= text[index] && text[index] <= 'z')
-                {
+              
                     x = Convert.ToInt32(text[index] - 'a');
-                }
+                
                 e = (x + eKey) % 26;
                 if (e < 0) e += 26;
                 encrypt += Convert.ToChar(e + 'a');
@@ -61,8 +60,8 @@ namespace SecurityLibrary
         {
             Plain = Plain.ToLower();
             Cipher = Cipher.ToLower();
-            int D = Convert.ToInt32(Cipher[0]-Plain[0]);
-            if (D < 0) D += 25;
+            int D = Convert.ToInt32(Cipher[0] - Plain[0]);
+            if (D < 0) D += 26;
             return D;
         }
 
